@@ -7,6 +7,7 @@ This test was composed to create a general overview of your knowledge regarding 
 ## Exercise 1
 
 ### Task
+
 Write a program in the language of your choice where:
 
 1. The iteration number (starting from 1), followed by a random number between 1 and 100, is printed 100 times.
@@ -15,30 +16,65 @@ Write a program in the language of your choice where:
 
 > Try to keep the procedure as short as possible.
 
+// Using C#
+using System;
+
+class Program
+{
+static void Main()
+{
+Random rand = new Random(); // Random Number Generator
+
+        // Loop of 100 times
+        for (int i = 1; i <= 100; i++)
+        {
+            int randomNumber = rand.Next(1, 101);  // Generate Random Number 1 to 100
+            Console.WriteLine($"{i}: {randomNumber}");
+
+            // In every 5 iterations, putting a seperator
+            if (i % 5 == 0)
+            {
+                Console.WriteLine("---");
+            }
+
+            // Lucky Number if randomNumber divisible by 7
+            if (randomNumber % 7 == 0)
+            {
+                Console.WriteLine("Lucky number!");
+            }
+        }
+    }
+
+}
+
 ---
 
 ## Exercise 2
 
-### 1. **What is your understanding of the term “Design Patterns”?**  
-   Provide a description in your own words.
+### 1. **What is your understanding of the term “Design Patterns”?**
 
-### 2. **Explain the MVC Pattern**  
-   - What does MVC stand for?  
-   - Explain the pattern in detail.  
-   - What are some use cases for this framework?
+Provide a description in your own words.
 
-### 3. **List three other design patterns**  
-   - Provide names and details for three additional design patterns.
-   - Explain how you have used those patterns in the past and how they have solved your problem  
-   - Use diagrams to explain the design patterns.
+### 2. **Explain the MVC Pattern**
+
+- What does MVC stand for?
+- Explain the pattern in detail.
+- What are some use cases for this framework?
+
+### 3. **List three other design patterns**
+
+- Provide names and details for three additional design patterns.
+- Explain how you have used those patterns in the past and how they have solved your problem
+- Use diagrams to explain the design patterns.
 
 ---
 
 ## Exercise 3
 
-### 1. **Implementation Task**  
-   Based on the class diagram below, provide an implementation in any object-oriented programming language of your choice.
-   
+### 1. **Implementation Task**
+
+Based on the class diagram below, provide an implementation in any object-oriented programming language of your choice.
+
 ```mermaid
 classDiagram
 
@@ -62,10 +98,11 @@ B --|> A
 C --|> B
 ```
 
-### 2. **Key Questions**  
-   - Are you able to directly create a new instance of `ObjectA`? Please explain your answer.  
-   - Given an instance of `ObjectC`, are you able to call the method `PrintMessage` defined in `ObjectB`? Please explain your answer.  
-   - Try to explain as many key features of object-oriented programming as you can find in this example.
+### 2. **Key Questions**
+
+- Are you able to directly create a new instance of `ObjectA`? Please explain your answer.
+- Given an instance of `ObjectC`, are you able to call the method `PrintMessage` defined in `ObjectB`? Please explain your answer.
+- Try to explain as many key features of object-oriented programming as you can find in this example.
 
 ---
 
@@ -75,15 +112,19 @@ C --|> B
 
 This exercise focuses on strategies for working with existing code bases and ensuring the software remains maintainable as new features and requirements are introduced.
 
-### 1. **Working with Existing Code**  
-- How would you approach understanding and contributing to an existing code base with minimal disruption?  
-- What practices would you follow to ensure your changes integrate well with the current structure?  
+### 1. **Working with Existing Code**
 
-### 2. **Ensuring Maintainability**  
-- What techniques would you use to keep the code base clean, modular, and easy to maintain as new features are added?  
-- How would you handle code documentation and testing to support long-term maintainability?  
+- How would you approach understanding and contributing to an existing code base with minimal disruption?
+- What practices would you follow to ensure your changes integrate well with the current structure?
 
-### 3. **Balancing Flexibility and Stability**  
-- How would you design or refactor the software to make it flexible for future changes while ensuring the existing functionality remains stable?  
+### 2. **Ensuring Maintainability**
+
+- What techniques would you use to keep the code base clean, modular, and easy to maintain as new features are added?
+- How would you handle code documentation and testing to support long-term maintainability?
+
+### 3. **Balancing Flexibility and Stability**
+
+- How would you design or refactor the software to make it flexible for future changes while ensuring the existing functionality remains stable?
 - Which design patterns or principles would you apply to achieve this balance
+
 ---
