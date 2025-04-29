@@ -15,7 +15,7 @@ Write a program in the language of your choice where:
 3. Write “Lucky number!” after every random number that is divisible by 7.
 
 > Try to keep the procedure as short as possible.
-
+```
 // Using C#
 using System;
 class Program
@@ -43,7 +43,7 @@ Random rand = new Random(); // Random Number Generator
         }
     }
 }
-
+```
 ---
 
 ## Exercise 2
