@@ -18,33 +18,30 @@ Write a program in the language of your choice where:
 
 // Using C#
 using System;
-
 class Program
 {
 static void Main()
 {
 Random rand = new Random(); // Random Number Generator
-
-        // Loop of 100 times
+ // Loop of 100 times
         for (int i = 1; i <= 100; i++)
         {
             int randomNumber = rand.Next(1, 101);  // Generate Random Number 1 to 100
             Console.WriteLine($"{i}: {randomNumber}");
 
-            // In every 5 iterations, putting a seperator
+ // In every 5 iterations, putting a seperator
             if (i % 5 == 0)
             {
                 Console.WriteLine("---");
             }
 
-            // Lucky Number if randomNumber divisible by 7
+ // Lucky Number if randomNumber divisible by 7
             if (randomNumber % 7 == 0)
             {
                 Console.WriteLine("Lucky number!");
             }
         }
     }
-
 }
 
 ---
