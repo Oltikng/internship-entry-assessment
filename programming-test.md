@@ -52,11 +52,26 @@ Random rand = new Random(); // Random Number Generator
 
 Provide a description in your own words.
 
+```
+Design Patterns are like template codes that help developers to reuse similar structures, for solving issues that might have happened before. This way it is faster to get into the solution , understanding the issue and fixing it.
+```
 ### 2. **Explain the MVC Pattern**
 
 - What does MVC stand for?
+`Model View Controller` which is a design pattern to organize code. 
 - Explain the pattern in detail.
+```
+While I was working with MVC design pattern using C# and .NET Framework on Visual Studio, it helped me to keep my code clear and easily readable especially while I was working on a Financial Web Application. The Model part handles all the data and rules that you want your application to have. One example is what properties should the column in your database have; like enum or normal varchar field and if you want to set it to mandatory.
+The View is where the user interface code will be stored (this folder contains files with ".cshtml" for example Index.cshtml) Here the FE developer uses bootstrap, html/css or javascript.
+Controller is the decision making part of the application which handles the user input and contains the logic to simple or even complex calculations.
+```
 - What are some use cases for this framework?
+```
+The use cases for this framework are seen mostly to applications that need user interface to interact directly with data such as: 
+- Web Applications (Finance or E-Commerce Apps)
+- Mobile Applications
+- CRM / ERP Systems
+```
 
 ### 3. **List three other design patterns**
 
