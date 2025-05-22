@@ -109,6 +109,72 @@ D --|> A
 B --|> A
 C --|> B
 ```
+```C#
+using System;
+
+abstract class A
+{
+    protected string Name;
+
+    public A(string name)
+    {
+        Name = name;
+    }
+
+    public abstract void PrintName();
+}
+
+abstract class B : A
+{
+    public B(string name) : base(name) { }
+
+    private void PrintName(string message)
+    {
+        Console.WriteLine("B says: " + message + " " + Name);
+    }
+}
+
+class C : B
+{
+    public C(string name) : base(name) { }
+
+    public override void PrintName()
+    {
+        Console.WriteLine("C default PrintName(): " + Name);
+    }
+
+    public void PrintName(string message)
+    {
+        Console.WriteLine(message + " " + Name);
+    }
+}
+
+class D : A
+{
+    public D(string name) : base(name) { }
+
+    public override void PrintName()
+    {
+        Console.WriteLine("Name: " + Name);
+    }
+}
+
+// Testing class implementation (Output)
+class Program
+{
+    static void Main(string[] args)
+    {
+        D d = new D("Alice");
+        d.PrintName(); 
+
+        C c = new C("Bob");
+        c.PrintName("Hello,");      
+        c.PrintName();              
+    }
+}
+
+
+```
 
 ### 2. **Key Questions**
 
